@@ -13,7 +13,7 @@ public class LVL_PressureSwitch : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Player" || other.gameObject.tag == "Bomb")
         {
             Interactable.GetComponent<LVL_Door>().Activate();
             GetComponent<MeshRenderer>().material = activatedMat;
@@ -22,9 +22,9 @@ public class LVL_PressureSwitch : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.tag == "Bomb")
+        if (other.gameObject.tag == "Player" || other.gameObject.tag == "Bomb")
         {
-            Debug.Log("Bomb");
+            GetComponent<MeshRenderer>().material = activatedMat;
         }
     }
 

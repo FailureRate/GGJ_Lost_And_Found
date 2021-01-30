@@ -11,12 +11,15 @@ public class LVL_ToggleSwitch : MonoBehaviour
     [SerializeField] private Material activatedMat;
     [SerializeField] private Material deactivatedMat;
 
+    private bool isSwitchActivated;
+
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player" || other.gameObject.tag == "Bomb")
+        if ((other.gameObject.tag == "Player" || other.gameObject.tag == "Bomb") && isSwitchActivated == false)
         {
             Interactable.GetComponent<LVL_Door>().Activate();
             GetComponent<MeshRenderer>().material = activatedMat;
+            isSwitchActivated = true;
         }
     }
 }
