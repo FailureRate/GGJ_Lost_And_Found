@@ -4,21 +4,15 @@ using UnityEngine;
 
 public class LVL_Door : MonoBehaviour
 {
-    private Vector3 Slide = new Vector3(0, 10.0f, 0);
-    void Start()
-    {
-    }
+    private Vector3 Slide = new Vector3(0, 7.58f, 0);
 
-    void Update()
-    {
-    }
     public void Activate()
     {
-        gameObject.transform.position += Slide;
+        gameObject.transform.position -= Slide;
     }
 
     public void Deactivate()
     {
-        gameObject.transform.position -= Slide;
+        gameObject.transform.position += Slide;
     }
 }

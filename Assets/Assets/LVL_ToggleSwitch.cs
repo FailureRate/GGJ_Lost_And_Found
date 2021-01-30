@@ -7,23 +7,16 @@ public class LVL_ToggleSwitch : MonoBehaviour
     [Header("Activatable")]
     [SerializeField] private GameObject Interactable;
 
-    Renderer renderer;
+    [Header("Material")]
+    [SerializeField] private Material activatedMat;
+    [SerializeField] private Material deactivatedMat;
 
-    void Start()
-    {
-        renderer = GetComponent<Renderer>();
-    }
-
-    void Update()
-    {
-
-    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player" || other.gameObject.tag == "Bomb")
         {
             Interactable.GetComponent<LVL_Door>().Activate();
-            renderer.material.SetColor("_Color", Color.red);
+            GetComponent<MeshRenderer>().material = activatedMat;
         }
     }
 }
