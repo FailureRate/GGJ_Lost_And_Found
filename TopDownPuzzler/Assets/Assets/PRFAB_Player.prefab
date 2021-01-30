@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2188731427292369974}
   - component: {fileID: 2188731427292369969}
   - component: {fileID: 2188731427292369968}
+  - component: {fileID: 1494033071856158798}
   m_Layer: 0
   m_Name: PRFAB_Player
   m_TagString: Untagged
@@ -70,6 +71,26 @@ MonoBehaviour:
   movementSpeed: 10
   movementVector: {x: 0, y: 0, z: 0}
   pointToLook: {x: 0, y: 0, z: 0}
+--- !u!114 &1494033071856158798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2188731427292369971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed3de8bec8c441e4fbcb6cc582cfd9b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hasBomb: 0
+  hasBow: 0
+  hasHook: 0
+  hasLantern: 0
+  bomb: {fileID: 4659427869862869226, guid: 851271ea6b063534299d87d0c856965e, type: 3}
+  arrow: {fileID: 0}
+  hook: {fileID: 0}
+  lantern: {fileID: 8520905166980672490}
 --- !u!1 &2188731427410338936
 GameObject:
   m_ObjectHideFlags: 0
@@ -331,6 +352,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 96c56ee2d0ab73e4d8a40145746b8d3d, type: 3}
+--- !u!1 &8520905166980672490 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4336210019042033745, guid: 96c56ee2d0ab73e4d8a40145746b8d3d,
+    type: 3}
+  m_PrefabInstance: {fileID: 5362949411197545403}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6827457691704545913 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1489854248683256258, guid: 96c56ee2d0ab73e4d8a40145746b8d3d,
