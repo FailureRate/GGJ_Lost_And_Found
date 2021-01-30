@@ -11,6 +11,7 @@ public class PL_ItemController : MonoBehaviour
     public bool hasLantern;
 
     private bool isLanternOn;
+    private bool isBombPlaced;
 
     [Header("References")]
     [SerializeField] private GameObject bomb;
@@ -30,7 +31,15 @@ public class PL_ItemController : MonoBehaviour
     {
         if(Input.GetKeyDown("e")){
             if (hasBomb){
-                Instantiate(bomb, this.gameObject.transform.position, this.gameObject.transform.rotation);
+                if(!isBombPlaced){
+                //Instantiate(bomb, this.gameObject.transform.position, this.gameObject.transform.rotation);
+                isBombPlaced = true;
+                bomb.transform.position = gameObject.transform.position;
+            }
+                else{
+                     isBombPlaced = false;
+                bomb.GetComponent<Item_Bomb>().Explode();
+                }
             }
         }
         if(Input.GetKeyDown("q")){
