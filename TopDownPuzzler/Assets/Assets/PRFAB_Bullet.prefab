@@ -42,9 +42,9 @@ Light:
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
-  m_Range: 5
+  m_Color: {r: 0.10980393, g: 0.4666667, b: 0.48235297, a: 1}
+  m_Intensity: 5
+  m_Range: 20
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -106,9 +106,10 @@ GameObject:
   - component: {fileID: 2976548135239466968}
   - component: {fileID: 6237139878009788874}
   - component: {fileID: 900178339}
+  - component: {fileID: 3868877216247643302}
   m_Layer: 0
   m_Name: PRFAB_Bullet
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -203,3 +204,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireVector: {x: 0, y: 0, z: 0}
+--- !u!54 &3868877216247643302
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8683479833754609614}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0

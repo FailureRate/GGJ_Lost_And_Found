@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class Item_Bullet : MonoBehaviour
 {
+
     public Vector3 fireVector;
+    [SerializeField] private float hitBulletLife = 0.5f;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,4 +24,14 @@ public class Item_Bullet : MonoBehaviour
         fireVector = direction;
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag != "Player")
+        {
+            fireVector = Vector3.zero;
+            Destroy(this.gameObject,0.5f);
+        }
+    }
+
+    
 }
