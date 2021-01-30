@@ -13,6 +13,8 @@ public class PL_Movement : MonoBehaviour
     [SerializeField] private float movementSpeed;
     [SerializeField] private Vector3 movementVector;
     [SerializeField] private Vector3 pointToLook;
+    [SerializeField] private Vector3 yVelocity;
+    [SerializeField] private float gravity;
 
     // Start is called before the first frame update
     void Start()
@@ -30,10 +32,15 @@ public class PL_Movement : MonoBehaviour
         // Gets X and Z axis changes
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
+        // Gravity
+        yVelocity.y +=  gravity * Time.deltaTime;
+        // Makes sure to building up downward velocity
+        if (controller.isGrounded && yVelocity.y < -2.0f) yVelocity.y = -2.0f; 
         // Adds the X and Z axis changes to a vector
         movementVector = (transform.right * x) + (transform.forward * z);
         // Moves the player
         controller.Move(movementVector * movementSpeed * Time.deltaTime);
+        controller.Move(yVelocity * Time.deltaTime);
         rotateModelAt();
 
     }
