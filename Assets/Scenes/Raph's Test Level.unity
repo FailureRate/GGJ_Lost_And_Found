@@ -400,13 +400,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9fdeaff5670b9b74ea0e84f0a1630a69,
         type: 3}
+      propertyPath: m_LocalScale.z
+      value: 52.939
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9fdeaff5670b9b74ea0e84f0a1630a69,
+        type: 3}
       propertyPath: m_LocalPosition.x
       value: -9.678478
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9fdeaff5670b9b74ea0e84f0a1630a69,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.0899999
+      value: 0.95287
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9fdeaff5670b9b74ea0e84f0a1630a69,
         type: 3}
@@ -663,6 +668,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 548df4579a588a342ba3c8463bfa5dcc, type: 3}
+--- !u!1 &1008776664 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 9fdeaff5670b9b74ea0e84f0a1630a69,
+    type: 3}
+  m_PrefabInstance: {fileID: 310691613}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &1008776668
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1008776664}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -5495902117074765545, guid: 9fdeaff5670b9b74ea0e84f0a1630a69, type: 3}
 --- !u!4 &1088909889 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2188731428613575497, guid: a4b8050d1e6f72d469cc5a6c835c34ae,
@@ -841,6 +866,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2188731427292369968, guid: a4b8050d1e6f72d469cc5a6c835c34ae,
+        type: 3}
+      propertyPath: gravity
+      value: -9.14
+      objectReference: {fileID: 0}
     - target: {fileID: 2188731427292369968, guid: a4b8050d1e6f72d469cc5a6c835c34ae,
         type: 3}
       propertyPath: playerCamera

@@ -71,6 +71,8 @@ MonoBehaviour:
   movementSpeed: 10
   movementVector: {x: 0, y: 0, z: 0}
   pointToLook: {x: 0, y: 0, z: 0}
+  yVelocity: {x: 0, y: 0, z: 0}
+  gravity: 0
 --- !u!114 &1494033071856158798
 MonoBehaviour:
   m_ObjectHideFlags: 0
