@@ -2,14 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LVL_Switch : MonoBehaviour
+public class LVL_ShootTarget : MonoBehaviour
 {
     [Header("Activatable")]
     [SerializeField] private GameObject Interactable;
 
+    Renderer renderer;
+
     void Start()
     {
-
+        renderer = GetComponent<Renderer>();
     }
 
     void Update()
@@ -18,9 +20,10 @@ public class LVL_Switch : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.name == "PRFAB_Player" || other.gameObject.name == "Bomb")
+        if (other.gameObject.tag == "Bullet")
         {
             Interactable.GetComponent<LVL_Door>().Activate();
+            renderer.material.SetColor("_Color", Color.red);
         }
     }
 }

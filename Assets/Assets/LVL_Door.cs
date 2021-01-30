@@ -12,9 +12,13 @@ public class LVL_Door : MonoBehaviour
     void Update()
     {
     }
-
     public void Activate()
     {
         gameObject.transform.position += Slide;
+    }
+
+    public void Deactivate()
+    {
+        gameObject.transform.position -= Slide;
     }
 }
