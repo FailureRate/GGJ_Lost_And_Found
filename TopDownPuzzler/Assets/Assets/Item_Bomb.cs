@@ -5,7 +5,7 @@ using UnityEngine;
 public class Item_Bomb : MonoBehaviour
 {
 
-     [SerializeField] private float timerDuration;
+    // [SerializeField] private float timerDuration;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,13 +15,15 @@ public class Item_Bomb : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-      timerDuration -= Time.deltaTime;
-        if(timerDuration <= 0.0){
-            Explode();
-        }
+    //   timerDuration -= Time.deltaTime;
+    //     if(timerDuration <= 0.0){
+    //         Explode();
+    //     }
     }
 
-    void Explode(){
-        Destroy(this.gameObject);
+    public void Explode(){
+       // Destroy(this.gameObject);
+    gameObject.transform.position = new Vector3(gameObject.transform.position.x,gameObject.transform.position.y-10,
+        gameObject.transform.position.z);
     }
 }
