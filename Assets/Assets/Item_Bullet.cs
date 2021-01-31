@@ -26,9 +26,10 @@ public class Item_Bullet : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag != "Player")
+        if(other.gameObject.CompareTag("Enviorment"))
         {
             fireVector = Vector3.zero;
+            Debug.Log(other.gameObject.tag);
             Destroy(this.gameObject,0.5f);
         }
     }
