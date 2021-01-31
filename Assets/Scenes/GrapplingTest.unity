@@ -436,18 +436,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: -0.07, y: 0, z: 0}
---- !u!1 &900798583 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2188731427410338936, guid: a4b8050d1e6f72d469cc5a6c835c34ae,
-    type: 3}
-  m_PrefabInstance: {fileID: 1621434678}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &900798584 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2188731427410338937, guid: a4b8050d1e6f72d469cc5a6c835c34ae,
-    type: 3}
-  m_PrefabInstance: {fileID: 1621434678}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &975420342
 GameObject:
   m_ObjectHideFlags: 0
@@ -709,9 +697,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2188731427292369968, guid: a4b8050d1e6f72d469cc5a6c835c34ae,
         type: 3}
+      propertyPath: canMove
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2188731427292369968, guid: a4b8050d1e6f72d469cc5a6c835c34ae,
+        type: 3}
       propertyPath: playerCamera
       value: 
       objectReference: {fileID: 1798676538}
+    - target: {fileID: 2188731427292369968, guid: a4b8050d1e6f72d469cc5a6c835c34ae,
+        type: 3}
+      propertyPath: timeForGrapple
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 2188731427292369971, guid: a4b8050d1e6f72d469cc5a6c835c34ae,
         type: 3}
       propertyPath: m_Name
@@ -777,6 +775,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6345608698017082716, guid: a4b8050d1e6f72d469cc5a6c835c34ae,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8964800576405674451, guid: a4b8050d1e6f72d469cc5a6c835c34ae,
         type: 3}
       propertyPath: hook
@@ -791,12 +794,12 @@ PrefabInstance:
         type: 3}
       propertyPath: gunOrigin
       value: 
-      objectReference: {fileID: 900798584}
+      objectReference: {fileID: 0}
     - target: {fileID: 8964800576405674451, guid: a4b8050d1e6f72d469cc5a6c835c34ae,
         type: 3}
       propertyPath: hookholder
       value: 
-      objectReference: {fileID: 900798583}
+      objectReference: {fileID: 0}
     - target: {fileID: 8964800576405674451, guid: a4b8050d1e6f72d469cc5a6c835c34ae,
         type: 3}
       propertyPath: maxDistance
@@ -865,6 +868,7 @@ MonoBehaviour:
   hasHook: 0
   hasLantern: 1
   bomb: {fileID: 4659427869862869226, guid: 851271ea6b063534299d87d0c856965e, type: 3}
+  bombExplosion: {fileID: 0}
   arrow: {fileID: 0}
   hook: {fileID: 0}
   lantern: {fileID: 1621434680}
@@ -883,8 +887,8 @@ MonoBehaviour:
   controller: {fileID: 1621434690}
   HidingHole: {fileID: 1277479646}
   distanceToPlayer: 2
+  playerHullTransform: {fileID: 1621434679}
   hook: {fileID: 1061852213}
-  hookholder: {fileID: 900798583}
   hookTravelSpeed: 50
   playerTravelSpeed: 100
   hooked: 0

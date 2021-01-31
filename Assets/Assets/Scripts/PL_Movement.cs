@@ -15,6 +15,8 @@ public class PL_Movement : MonoBehaviour
     [SerializeField] private Vector3 pointToLook;
     [SerializeField] private Vector3 yVelocity;
     [SerializeField] private float gravity;
+    [SerializeField] public bool canMove;
+
 
     // Start is called before the first frame update
     void Start()
@@ -29,20 +31,28 @@ public class PL_Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Gets X and Z axis changes
-        float x = Input.GetAxis("Horizontal");
-        float z = Input.GetAxis("Vertical");
-        // Gravity
-        yVelocity.y +=  gravity * Time.deltaTime;
-        // Makes sure to building up downward velocity
-        if (controller.isGrounded && yVelocity.y < -2.0f) yVelocity.y = -2.0f; 
-        // Adds the X and Z axis changes to a vector
-        movementVector = (transform.right * x) + (transform.forward * z);
-        // Moves the player
-        controller.Move(movementVector * movementSpeed * Time.deltaTime);
-        controller.Move(yVelocity * Time.deltaTime);
-        rotateModelAt();
 
+        if (canMove)
+        {
+            // Gets X and Z axis changes
+            float x = Input.GetAxis("Horizontal");
+            float z = Input.GetAxis("Vertical");
+            // Gravity
+            yVelocity.y += gravity * Time.deltaTime;
+            // Makes sure to building up downward velocity
+            if (controller.isGrounded && yVelocity.y < -2.0f) yVelocity.y = -2.0f;
+            // Adds the X and Z axis changes to a vector
+            movementVector = (transform.right * x) + (transform.forward * z);
+            // Moves the player
+            controller.Move(movementVector * movementSpeed * Time.deltaTime);
+            controller.Move(yVelocity * Time.deltaTime);
+            rotateModelAt();
+        }
+        if (Input.GetMouseButtonDown(0))
+        {
+            canMove = false;
+            StartCoroutine(waiter());
+        }
     }
 
     private void rotateModelAt()
@@ -62,6 +72,12 @@ public class PL_Movement : MonoBehaviour
             // Rotates the player to the xz cordinates
             playerModel.transform.LookAt(new Vector3(pointToLook.x, transform.position.y, pointToLook.z));
         }
+
+    }
+
+    IEnumerator waiter()
+    {
+        yield return new WaitUntil(() =>canMove);
 
     }
 }

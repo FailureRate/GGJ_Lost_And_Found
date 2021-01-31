@@ -7,8 +7,8 @@ public class Item_GrappleHook : MonoBehaviour
     [SerializeField] private CharacterController controller;
     [SerializeField] GameObject HidingHole;
     [SerializeField] float distanceToPlayer;
+    [SerializeField] private Transform playerHullTransform;
     public GameObject hook;
-    public GameObject hookholder;
     public float hookTravelSpeed;
     public float playerTravelSpeed;
     public static bool fired;
@@ -25,7 +25,7 @@ public class Item_GrappleHook : MonoBehaviour
        
         if(fired == true && hooked == false)
         {
-            hook.transform.Translate(Vector3.forward* Time.deltaTime * hookTravelSpeed);
+            hook.transform.Translate(playerHullTransform.forward * Time.deltaTime * hookTravelSpeed);
             currentDistance = Vector3.Distance(transform.position, hook.transform.position);
 
             if (currentDistance >= maxDistance)
@@ -39,6 +39,7 @@ public class Item_GrappleHook : MonoBehaviour
         
         if (hooked == true )
         {
+            
             Vector3 something = hook.transform.position - transform.position;
             something.Normalize();
 
@@ -52,6 +53,7 @@ public class Item_GrappleHook : MonoBehaviour
             if (distanceToHook < distanceToPlayer)
             {
                 ReturnHook();
+                
             }
                 
             
@@ -71,7 +73,7 @@ public class Item_GrappleHook : MonoBehaviour
     void ReturnHook()
     {
 
-   
+        GameObject.Find("PlayerHolder").GetComponent<PL_Movement>().canMove = true;
         fired = false;
         hooked = false;
         Debug.Log("test");
