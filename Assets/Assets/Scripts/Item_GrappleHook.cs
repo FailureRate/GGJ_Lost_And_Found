@@ -73,7 +73,7 @@ public class Item_GrappleHook : MonoBehaviour
     void ReturnHook()
     {
 
-        GameObject.Find("PlayerHolder").GetComponent<PL_Movement>().canMove = true;
+        GameObject.Find("PRFAB_Player").GetComponent<PL_Movement>().canMove = true;
         fired = false;
         hooked = false;
         Debug.Log("test");
