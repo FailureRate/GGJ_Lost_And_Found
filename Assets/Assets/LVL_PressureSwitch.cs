@@ -11,12 +11,21 @@ public class LVL_PressureSwitch : MonoBehaviour
     [SerializeField] private Material activatedMat;
     [SerializeField] private Material deactivatedMat;
 
-    private void OnTriggerEnter(Collider other)
+    private bool isSwitchActivated;
+
+    private void Update()
     {
-        if (other.gameObject.tag == "Player" || other.gameObject.tag == "Bomb")
+        if(isSwitchActivated == true)
         {
             Interactable.GetComponent<LVL_Door>().Activate();
-            GetComponent<MeshRenderer>().material = activatedMat;
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            Interactable.GetComponent<LVL_Door>().Activate();
         }
     }
 
@@ -25,15 +34,17 @@ public class LVL_PressureSwitch : MonoBehaviour
         if (other.gameObject.tag == "Player" || other.gameObject.tag == "Bomb")
         {
             GetComponent<MeshRenderer>().material = activatedMat;
-        }
+            isSwitchActivated = true;
+}
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.tag == "Player" || other.gameObject.tag == "Bomb")
+        if ((other.gameObject.tag == "Player" || other.gameObject.tag == "Bomb") && isSwitchActivated == true)
         {
             Interactable.GetComponent<LVL_Door>().Deactivate();
             GetComponent<MeshRenderer>().material = deactivatedMat;
+            isSwitchActivated = false;
         }
     }
 }
