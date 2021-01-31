@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 571d7d34329419b45a15e42326f4c99a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  switchHeadTransform: {fileID: 1172552595531715957}
+  objectRef: {fileID: 1172552595531715957}
   rotateSpeed: 50
 --- !u!114 &-2936559191250598798
 MonoBehaviour:
@@ -62,7 +62,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Interactable: {fileID: 0}
   activatedMat: {fileID: 2100000, guid: 363761d2e41173c4f82ddf5028d096e9, type: 2}
-  Crystal: {fileID: 0}
+  deactivatedMat: {fileID: 2100000, guid: a4fff8778d469c24591816a10b85d90b, type: 2}
+  Crystal: {fileID: 1949617678982385615}
+  DoorScript: {fileID: 0}
 --- !u!1001 &1715597828758009955
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -242,6 +244,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 909dcdb0a62a93b4e8f1263b0e26cacb, type: 3}
+--- !u!1 &1949617678982385615 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 909dcdb0a62a93b4e8f1263b0e26cacb,
+    type: 3}
+  m_PrefabInstance: {fileID: 1715597829815939742}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1172552595531715957 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 909dcdb0a62a93b4e8f1263b0e26cacb,

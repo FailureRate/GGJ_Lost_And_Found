@@ -30,6 +30,7 @@ public class ENV_DarknessRises : MonoBehaviour
         if (other.gameObject.CompareTag(transitionTag))
         {
             StartCoroutine(LightsOut());
+            Debug.Log("Kill the lights!");
         }
     }
     private void OnTriggerExit(Collider other)
