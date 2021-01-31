@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class Item_HookDetector : MonoBehaviour
 {
-    public Item_GrappleHook PRFAB_Player;
+    public PL_ItemController PRFAB_Player;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Hookable")
         {
-            PRFAB_Player.GetComponent<Item_GrappleHook>().SetHookState(true);
+            PRFAB_Player.GetComponent<PL_ItemController>().SetHookState(true);
 
         }
         

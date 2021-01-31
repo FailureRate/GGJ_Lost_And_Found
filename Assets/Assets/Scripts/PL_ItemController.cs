@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class PL_ItemController : MonoBehaviour
 {
+    [Header("Button Controls")]
+    [SerializeField] KeyCode lanternButton;
+    [SerializeField] KeyCode bombButton;
+    [SerializeField] int gunMouseCode;
+    [SerializeField] int hookMouseCode;
+
     [Header("Item Bools")]
     public bool hasBomb;
     public bool hasGun;
@@ -67,11 +73,12 @@ public class PL_ItemController : MonoBehaviour
         LightInputs();
         BombInputs();
         GunInputs();
+        CheckManager();
     }
 
     private void LightInputs()
     {
-        if (Input.GetKeyDown("q"))
+        if (Input.GetKeyDown(lanternButton))
         {
             if (hasLantern)
             {
@@ -90,7 +97,7 @@ public class PL_ItemController : MonoBehaviour
     }
     private void BombInputs()
     {
-        if (Input.GetKeyDown("e"))
+        if (Input.GetKeyDown(bombButton))
         {
             if (hasBomb)
             {
@@ -116,7 +123,7 @@ public class PL_ItemController : MonoBehaviour
     {
         if (hasGun)
         {
-            if (Input.GetKeyDown(KeyCode.Space) && gunCooldownTimer >= gunCooldownTimerMax)
+            if (Input.GetMouseButtonUp(gunMouseCode) && gunCooldownTimer >= gunCooldownTimerMax)
             {
                 GameObject bullet = Instantiate(bulletRefrence, gunOrigin.position, Quaternion.identity);
                 bullet.GetComponent<Item_Bullet>().SetFireVector(playerHullTransform.forward * projectileSpeed);
@@ -128,47 +135,60 @@ public class PL_ItemController : MonoBehaviour
     }
     private void HookInputs()
     {
-        if (Input.GetMouseButtonDown(0) && fired == false)
-            fired = true;
-
-        if (fired == true && hooked == false)
+        if (hasHook)
         {
-            hook.transform.Translate(playerHullTransform.forward * Time.deltaTime * hookTravelSpeed);
-            float currentDistance = Vector3.Distance(transform.position, hook.transform.position);
+            if (Input.GetMouseButtonDown(hookMouseCode) && fired == false)
+                fired = true;
 
-            if (currentDistance >= maxDistance)
+            if (fired == true && hooked == false)
             {
-                ReturnHook();
-            }
+                hook.transform.Translate(playerHullTransform.forward * Time.deltaTime * hookTravelSpeed);
+                float currentDistance = Vector3.Distance(transform.position, hook.transform.position);
 
+                if (currentDistance >= maxDistance)
+                {
+                    ReturnHook();
+                }
 
-        }
-
-
-        if (hooked == true)
-        {
-
-            Vector3 something = hook.transform.position - transform.position;
-            something.Normalize();
-
-            controller.Move(something * Time.deltaTime * playerTravelSpeed);
-            float distanceToHook = Vector3.Distance(transform.position, hook.transform.position);
-            Debug.Log(distanceToHook);
-
-
-            if (distanceToHook < distanceToPlayer)
-            {
-                ReturnHook();
 
             }
 
 
-        }
-        if (fired == false && hooked == false)
-        {
-            hook.transform.position = HidingHole.transform.position;
+            if (hooked == true)
+            {
+
+                Vector3 something = hook.transform.position - transform.position;
+                something.Normalize();
+
+                controller.Move(something * Time.deltaTime * playerTravelSpeed);
+                float distanceToHook = Vector3.Distance(transform.position, hook.transform.position);
+                //Debug.Log(distanceToHook);
+
+
+                if (distanceToHook < distanceToPlayer)
+                {
+                    ReturnHook();
+
+                }
+
+
+            }
+            if (fired == false && hooked == false)
+            {
+                hook.transform.position = HidingHole.transform.position;
+            }
         }
     }
+
+    private void CheckManager()
+    {
+        hasBomb = GameManager.playerHasBomb;
+        hasGun = GameManager.playerHasGun;
+        hasHook = GameManager.playerHasHook;
+        hasLantern = GameManager.playerHasLantern;
+    }
+    
+    
     private IEnumerator MuzzleFlash()
     {
         muzzelLight.enabled = true;
@@ -187,6 +207,6 @@ public class PL_ItemController : MonoBehaviour
         GameObject.Find("PRFAB_Player").GetComponent<PL_Movement>().canMove = true;
         fired = false;
         hooked = false;
-        Debug.Log("test");
+        //Debug.Log("test");
     }
 }

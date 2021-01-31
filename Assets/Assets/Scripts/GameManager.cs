@@ -5,7 +5,11 @@ using UnityEngine;
 public class GameManager {
     private static GameManager instance = new GameManager();
     private GameStates currentState;
- 
+    public static bool playerHasLantern = false;
+    public static bool playerHasGun = false;
+    public static bool playerHasBomb = false;
+    public static bool playerHasHook = false;
+
     // make sure the constructor is private, so it can only be instantiated here
     private GameManager() {
     //    DontDestroyOnLoad(this.gameObject);
@@ -50,8 +54,36 @@ public class GameManager {
         }
         return currentState;
    }
+    public void SetItem(itemState state_)
+    {
+        if(state_ == itemState.Lantern)
+        {
+            playerHasLantern = true;
+        }
+        if(state_ == itemState.Gun)
+        {
+            playerHasGun = true;
+        }
+        if(state_ == itemState.Bomb)
+        {
+            playerHasBomb = true;
+        }
+        if(state_ == itemState.Hook)
+        {
+            playerHasHook = true;
+        }
+    }
 }
- 
+
+public enum itemState
+{
+    None,
+    Lantern,
+    Gun,
+    Bomb,
+    Hook
+}
+
 public enum GameStates {
     MENU,
     LEVEL

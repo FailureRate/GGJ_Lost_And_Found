@@ -251,7 +251,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   shiftTime: 2
-  startColor: {r: 0, g: 0, b: 0, a: 1}
+  startColor: {r: 1, g: 1, b: 1, a: 1}
   endColor: {r: 0, g: 0.78431374, b: 0.78431374, a: 1}
   diffrence: {r: 0, g: 0.21960784, b: 0.21960784, a: 0}
 --- !u!1 &2188731427292369971
@@ -342,19 +342,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed3de8bec8c441e4fbcb6cc582cfd9b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasBomb: 1
-  hasGun: 1
-  hasHook: 1
-  hasLantern: 1
+  lanternButton: 113
+  bombButton: 101
+  gunMouseCode: 0
+  hookMouseCode: 1
+  hasBomb: 0
+  hasGun: 0
+  hasHook: 0
+  hasLantern: 0
   lantern: {fileID: 8520905166980672490}
   bomb: {fileID: 0}
-  bombExplosion: {fileID: 0}
+  bombExplosion: {fileID: 2697400775370233486, guid: d9839f18964fba2438df2145f152365e,
+    type: 3}
   bombCooldownTimerMax: 1
   playerHullTransform: {fileID: 2188731428613575497}
   gunOrigin: {fileID: 5944687405244748688}
   bulletRefrence: {fileID: 8683479833754609614, guid: d1d2a70df1b329e44827c965218fdef0,
     type: 3}
-  muzzelLight: {fileID: 2709693215614997547}
+  muzzelLight: {fileID: 0}
   projectileSpeed: 50
   gunCooldownTimerMax: 1
   controller: {fileID: 2188731427292369969}
@@ -372,7 +377,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2188731427292369971}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73ef6954eec2d0348904db3327812e33, type: 3}
   m_Name: 
@@ -391,7 +396,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2188731427292369971}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9ed4e6fdf4d8bf8429d8906f67819190, type: 3}
   m_Name: 
@@ -660,6 +665,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: ce3805065981aec4ebdfbe6cd52b92c9,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: ce3805065981aec4ebdfbe6cd52b92c9,
         type: 3}

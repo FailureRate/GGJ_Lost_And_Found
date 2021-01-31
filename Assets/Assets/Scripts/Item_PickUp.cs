@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Item_PickUp : MonoBehaviour
 {
+    [SerializeField] itemState item;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +21,7 @@ public class Item_PickUp : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Refrence Gamemanager");
+            GameManager.Instance.SetItem(item);
             Destroy(this.gameObject);
         }
     }

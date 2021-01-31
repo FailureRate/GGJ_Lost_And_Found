@@ -48,7 +48,7 @@ public class PL_Movement : MonoBehaviour
             controller.Move(yVelocity * Time.deltaTime);
             rotateModelAt();
         }
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(1) && GameManager.playerHasBomb)
         {
             canMove = false;
             StartCoroutine(waiter());

@@ -35,7 +35,6 @@ public class GUI_PauseMenu : MonoBehaviour
             }
         }
     }
-    
     public void ResumeOnClick()
     {
         panel.SetActive(false);

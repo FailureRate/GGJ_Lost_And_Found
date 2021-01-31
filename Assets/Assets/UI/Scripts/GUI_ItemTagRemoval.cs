@@ -28,21 +28,26 @@ public class GUI_ItemTagRemoval : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(GameManager.playerHasLantern);
         if (Lantern && imageArray[0].enabled == false)
         {
             imageArray[0].enabled = true;
         }
-        if (Gun && imageArray[1].enabled == false)
+        if (Gun && imageArray[1].enabled == false && GameManager.playerHasGun)
         {
             imageArray[1].enabled = true;
         }
-        if (Bomb && imageArray[2].enabled == false)
+        if (Bomb && imageArray[2].enabled == false && GameManager.playerHasBomb)
         {
             imageArray[2].enabled = true;
         }
-        if (Hook && imageArray[3].enabled == false)
+        if (Hook && imageArray[3].enabled == false && GameManager.playerHasHook)
         {
             imageArray[3].enabled = true;
         }
+        Lantern = GameManager.playerHasLantern;
+        Gun = GameManager.playerHasGun;
+        Bomb = GameManager.playerHasBomb;
+        Hook = GameManager.playerHasHook;
     }
 }

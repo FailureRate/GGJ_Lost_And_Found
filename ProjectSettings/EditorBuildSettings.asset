@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/TitleScreen.unity
     guid: 4a56ec6b1ea64754183b7698c25bae08
   - enabled: 1
-    path: Assets/Scenes/SwitchTest.unity
-    guid: 6100bfddee310bf4e86670484d57de7a
+    path: Assets/Scenes/GameLevels/LVL_Introduction.unity
+    guid: 9d3f3a2165ae3cc4d8a3a552dfc37c2b
   m_configObjects: {}
