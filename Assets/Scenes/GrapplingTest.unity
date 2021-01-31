@@ -561,7 +561,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1061852213}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.7652, z: 0.71}
+  m_LocalPosition: {x: -11.95, y: 0.7652, z: 11.22}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -658,36 +658,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Playerholder: {fileID: 1621434686}
---- !u!1 &1277479646
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1277479647}
-  m_Layer: 0
-  m_Name: HidingHole
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1277479647
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1277479646}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.71, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1621434679}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1621434678
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -695,21 +665,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2188731427292369968, guid: a4b8050d1e6f72d469cc5a6c835c34ae,
-        type: 3}
-      propertyPath: canMove
-      value: 1
-      objectReference: {fileID: 0}
+    - target: {fileID: 1621434686, guid: a4b8050d1e6f72d469cc5a6c835c34ae, type: 3}
+      propertyPath: hook
+      value: 
+      objectReference: {fileID: 1061852213}
     - target: {fileID: 2188731427292369968, guid: a4b8050d1e6f72d469cc5a6c835c34ae,
         type: 3}
       propertyPath: playerCamera
       value: 
       objectReference: {fileID: 1798676538}
-    - target: {fileID: 2188731427292369968, guid: a4b8050d1e6f72d469cc5a6c835c34ae,
-        type: 3}
-      propertyPath: timeForGrapple
-      value: 0.5
-      objectReference: {fileID: 0}
     - target: {fileID: 2188731427292369971, guid: a4b8050d1e6f72d469cc5a6c835c34ae,
         type: 3}
       propertyPath: m_Name
@@ -770,68 +734,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4019919768368057086, guid: a4b8050d1e6f72d469cc5a6c835c34ae,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6345608698017082716, guid: a4b8050d1e6f72d469cc5a6c835c34ae,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8964800576405674451, guid: a4b8050d1e6f72d469cc5a6c835c34ae,
-        type: 3}
-      propertyPath: hook
-      value: 
-      objectReference: {fileID: 1061852213}
-    - target: {fileID: 8964800576405674451, guid: a4b8050d1e6f72d469cc5a6c835c34ae,
-        type: 3}
-      propertyPath: linInt
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8964800576405674451, guid: a4b8050d1e6f72d469cc5a6c835c34ae,
-        type: 3}
-      propertyPath: gunOrigin
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8964800576405674451, guid: a4b8050d1e6f72d469cc5a6c835c34ae,
-        type: 3}
-      propertyPath: hookholder
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8964800576405674451, guid: a4b8050d1e6f72d469cc5a6c835c34ae,
-        type: 3}
-      propertyPath: maxDistance
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 8964800576405674451, guid: a4b8050d1e6f72d469cc5a6c835c34ae,
-        type: 3}
-      propertyPath: playerCamera
-      value: 
-      objectReference: {fileID: 1798676538}
-    - target: {fileID: 8964800576405674451, guid: a4b8050d1e6f72d469cc5a6c835c34ae,
-        type: 3}
-      propertyPath: playerPrefab
-      value: 
-      objectReference: {fileID: 1621434681}
-    - target: {fileID: 8964800576405674451, guid: a4b8050d1e6f72d469cc5a6c835c34ae,
-        type: 3}
-      propertyPath: grappleDistance
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 8964800576405674451, guid: a4b8050d1e6f72d469cc5a6c835c34ae,
-        type: 3}
-      propertyPath: hookTravelSpeed
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 8964800576405674451, guid: a4b8050d1e6f72d469cc5a6c835c34ae,
-        type: 3}
-      propertyPath: playerTravelSpeed
-      value: 10
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 8964800576405674451, guid: a4b8050d1e6f72d469cc5a6c835c34ae, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a4b8050d1e6f72d469cc5a6c835c34ae, type: 3}
 --- !u!4 &1621434679 stripped
 Transform:
@@ -839,67 +742,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1621434678}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1621434680 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8520905166980672490, guid: a4b8050d1e6f72d469cc5a6c835c34ae,
+--- !u!114 &1621434686 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1621434686, guid: a4b8050d1e6f72d469cc5a6c835c34ae,
     type: 3}
   m_PrefabInstance: {fileID: 1621434678}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1621434681 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2188731427292369971, guid: a4b8050d1e6f72d469cc5a6c835c34ae,
-    type: 3}
-  m_PrefabInstance: {fileID: 1621434678}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1621434682
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1621434681}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed3de8bec8c441e4fbcb6cc582cfd9b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hasBomb: 1
-  hasBow: 0
-  hasHook: 0
-  hasLantern: 1
-  bomb: {fileID: 4659427869862869226, guid: 851271ea6b063534299d87d0c856965e, type: 3}
-  bombExplosion: {fileID: 0}
-  arrow: {fileID: 0}
-  hook: {fileID: 0}
-  lantern: {fileID: 1621434680}
---- !u!114 &1621434686
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1621434681}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9ed4e6fdf4d8bf8429d8906f67819190, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controller: {fileID: 1621434690}
-  HidingHole: {fileID: 1277479646}
-  distanceToPlayer: 2
-  playerHullTransform: {fileID: 1621434679}
-  hook: {fileID: 1061852213}
-  hookTravelSpeed: 50
-  playerTravelSpeed: 100
-  hooked: 0
-  maxDistance: 20
-  hookposition: {x: 0, y: 0, z: 0}
---- !u!143 &1621434690 stripped
-CharacterController:
-  m_CorrespondingSourceObject: {fileID: 2188731427292369969, guid: a4b8050d1e6f72d469cc5a6c835c34ae,
-    type: 3}
-  m_PrefabInstance: {fileID: 1621434678}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1656908628
 GameObject:
   m_ObjectHideFlags: 0
