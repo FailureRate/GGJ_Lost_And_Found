@@ -5,8 +5,9 @@ using UnityEngine;
 public class LVL_Killzone : MonoBehaviour
 {
     [Header("Reset")]
-    [SerializeField] private GameObject PlayerSpawn;
     [SerializeField] private GameObject Player;
+    [SerializeField] private Transform PlayerSpawn;
+    [SerializeField] private Transform PlayerTransform;
 
     Vector3 noMomentum = new Vector3(0, 0, 0);
 
@@ -14,8 +15,8 @@ public class LVL_Killzone : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            Player.transform.position = PlayerSpawn.transform.position;
-            Player.GetComponent<Rigidbody>().velocity = noMomentum;
+            Instantiate(PlayerTransform, PlayerSpawn.position, PlayerSpawn.rotation);
+            Destroy(Player);
         }
     }
 }

@@ -1846,7 +1846,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &690505391
 Transform:
   m_ObjectHideFlags: 0
@@ -1873,8 +1873,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9cd558e735bc794bb5978b05a7bf2fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerSpawn: {fileID: 168250535}
   Player: {fileID: 1575315546}
+  PlayerSpawn: {fileID: 168250536}
+  PlayerTransform: {fileID: 792946798}
 --- !u!65 &690505393
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4310,7 +4311,7 @@ PrefabInstance:
     - target: {fileID: 7776379687090440102, guid: d01859f71aa0abf4182a0877b4d6a603,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7776379687090440102, guid: d01859f71aa0abf4182a0877b4d6a603,
         type: 3}
