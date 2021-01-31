@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Item_Bomb : MonoBehaviour
 {
+    public ParticleSystem explosionParticle;
 
     // [SerializeField] private float timerDuration;
     // Start is called before the first frame update
