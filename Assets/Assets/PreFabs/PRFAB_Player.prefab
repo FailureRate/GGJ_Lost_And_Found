@@ -218,7 +218,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2188731428613575497}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!135 &2184263983117874065
 SphereCollider:
@@ -267,6 +267,8 @@ GameObject:
   - component: {fileID: 2188731427292369968}
   - component: {fileID: 1494033071856158798}
   - component: {fileID: 43253547}
+  - component: {fileID: 1621434682}
+  - component: {fileID: 1621434686}
   m_Layer: 0
   m_Name: PRFAB_Player
   m_TagString: Player
@@ -328,6 +330,7 @@ MonoBehaviour:
   pointToLook: {x: 0, y: 0, z: 0}
   yVelocity: {x: 0, y: 0, z: 0}
   gravity: 0
+  canMove: 1
 --- !u!114 &1494033071856158798
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -368,6 +371,49 @@ MonoBehaviour:
   muzzelLight: {fileID: 1741849380}
   projectileSpeed: 50
   fireCooldownMax: 1
+--- !u!114 &1621434682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2188731427292369971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed3de8bec8c441e4fbcb6cc582cfd9b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hasBomb: 1
+  hasBow: 0
+  hasHook: 0
+  hasLantern: 1
+  bomb: {fileID: 4659427869862869226, guid: 851271ea6b063534299d87d0c856965e, type: 3}
+  bombExplosion: {fileID: 0}
+  arrow: {fileID: 0}
+  hook: {fileID: 0}
+  lantern: {fileID: 8520905166980672490}
+--- !u!114 &1621434686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2188731427292369971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ed4e6fdf4d8bf8429d8906f67819190, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 2188731427292369969}
+  HidingHole: {fileID: 4839014552345378700}
+  distanceToPlayer: 2
+  playerHullTransform: {fileID: 2188731428613575497}
+  hook: {fileID: 0}
+  hookTravelSpeed: 50
+  playerTravelSpeed: 100
+  hooked: 0
+  maxDistance: 20
+  hookposition: {x: 0, y: 0, z: 0}
 --- !u!1 &2188731428613575511
 GameObject:
   m_ObjectHideFlags: 0
@@ -401,6 +447,7 @@ Transform:
   m_Children:
   - {fileID: 1194452500700736709}
   - {fileID: 545421632}
+  - {fileID: 2969878808737823270}
   - {fileID: 6345608698017082716}
   m_Father: {fileID: 2188731427292369974}
   m_RootOrder: 1
@@ -608,6 +655,36 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &4839014552345378700
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2969878808737823270}
+  m_Layer: 0
+  m_Name: HidingHole
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2969878808737823270
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4839014552345378700}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.71, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2188731428613575497}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1664420111851014958
 PrefabInstance:
   m_ObjectHideFlags: 0
