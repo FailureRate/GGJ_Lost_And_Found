@@ -56,6 +56,10 @@ public class PL_ItemController : MonoBehaviour
     [SerializeField] bool hooked;
     [SerializeField] float maxDistance;
 
+    [Header("Sfx")]
+    public AudioClip bombSound;
+    public AudioClip gun;
+    public AudioClip hookSound;
 
     // Start is called before the first frame update
     void Start()
@@ -113,6 +117,8 @@ public class PL_ItemController : MonoBehaviour
                 {
                     isBombPlaced = false;
                     bomb.GetComponent<Item_Bomb>().Explode();
+                    GetComponent<AudioSource>().clip = bombSound;
+                    GetComponent<AudioSource>().Play();
                     bombExplosion.Play();
 
                 }
@@ -127,6 +133,8 @@ public class PL_ItemController : MonoBehaviour
             {
                 GameObject bullet = Instantiate(bulletRefrence, gunOrigin.position, Quaternion.identity);
                 bullet.GetComponent<Item_Bullet>().SetFireVector(playerHullTransform.forward * projectileSpeed);
+                GetComponent<AudioSource>().clip = gun;
+                GetComponent<AudioSource>().Play();
                 Destroy(bullet, gunCooldownTimerMax);
                 StartCoroutine(MuzzleFlash());
                 gunCooldownTimer = 0.0f;
@@ -137,8 +145,12 @@ public class PL_ItemController : MonoBehaviour
     {
         if (hasHook)
         {
-            if (Input.GetMouseButtonDown(hookMouseCode) && fired == false)
+            if (Input.GetMouseButtonDown(hookMouseCode) && fired == false){
                 fired = true;
+                GetComponent<AudioSource>().clip = hookSound;
+                GetComponent<AudioSource>().Play();
+            }
+               
 
             if (fired == true && hooked == false)
             {

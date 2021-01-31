@@ -14,6 +14,7 @@ public class LVL_ShootTarget : MonoBehaviour
     [Header("Reference")]
     [SerializeField] private GameObject Crystal;
 
+
     private bool isSwitchActivated;
     public LVL_Door DoorScript;
 
