@@ -33,6 +33,7 @@ public class LVL_ShootTarget : MonoBehaviour
         }
         else
         {
+            if (isSwitchActivated)
             {
                 Crystal.GetComponent<MeshRenderer>().material = activatedMat;
                 isSwitchActivated = true;
