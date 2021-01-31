@@ -27,6 +27,13 @@ public class Util_SceneManager : MonoBehaviour
         
     }
 
+   public void ReturnToStart()
+    {
+        GameManager.Instance.CurrentState(GameStates.MENU);
+        audioManager.SceneChange();
+        SceneManager.LoadScene(0);
+    }
+
    public void LoadNextScene(){
        GameManager.Instance.CurrentState(GameStates.LEVEL); 
        audioManager.SceneChange();
