@@ -28,7 +28,7 @@ public class GUI_ItemTagRemoval : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(GameManager.playerHasLantern);
+        //Debug.Log(GameManager.playerHasLantern);
         if (Lantern && imageArray[0].enabled == false)
         {
             imageArray[0].enabled = true;
