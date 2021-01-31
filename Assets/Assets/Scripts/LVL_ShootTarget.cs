@@ -65,6 +65,7 @@ public class LVL_ShootTarget : MonoBehaviour
             }
             //Interactable.GetComponent<LVL_Door>().Activate();
             Crystal.GetComponent<MeshRenderer>().material = activatedMat;
+            GetComponent<AudioSource>().Play();
             isSwitchActivated = true;
         }
 
