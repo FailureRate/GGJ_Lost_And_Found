@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1715597828314905352}
   - component: {fileID: 1715597828314905353}
   - component: {fileID: -2936559191250598798}
+  - component: {fileID: 6156722096530283897}
   m_Layer: 0
   m_Name: PRFAB_GunSwitch
   m_TagString: Untagged
@@ -60,11 +61,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc21c171c6dc4ab41bd361600dd7631e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Interactable: {fileID: 0}
+  Interactable:
+  - {fileID: 0}
   activatedMat: {fileID: 2100000, guid: 363761d2e41173c4f82ddf5028d096e9, type: 2}
   deactivatedMat: {fileID: 2100000, guid: a4fff8778d469c24591816a10b85d90b, type: 2}
   Crystal: {fileID: 1949617678982385615}
+  isSwitchActivated: 0
   DoorScript: {fileID: 0}
+--- !u!65 &6156722096530283897
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1715597828314905358}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.03, y: 0.03, z: 0.04}
+  m_Center: {x: 0, y: 0, z: -0.01}
 --- !u!1001 &1715597828758009955
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -33,7 +33,6 @@ public class LVL_ShootTarget : MonoBehaviour
         }
         else
         {
-            if (DoorScript.isOpen == true)
             {
                 Crystal.GetComponent<MeshRenderer>().material = activatedMat;
                 isSwitchActivated = true;
