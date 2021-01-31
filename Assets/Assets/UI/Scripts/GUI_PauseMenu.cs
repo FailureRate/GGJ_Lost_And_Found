@@ -23,6 +23,7 @@ public class GUI_PauseMenu : MonoBehaviour
         {
             if(panel.active == true)
             {
+                //Cursor.visible = true;
                 panel.SetActive(false);
                 GameManager.Instance.CurrentState(GameStates.MENU);
                 GameManager.Instance.Pause(false);

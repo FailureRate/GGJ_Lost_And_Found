@@ -35,7 +35,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 838}
+  m_AnchoredPosition: {x: 0, y: 340}
   m_SizeDelta: {x: 1805.7015, y: 414.5327}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8188066341327210980
@@ -68,7 +68,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: aaa24f91aabbb7c47abc9c8f952957ca, type: 3}
-    m_FontSize: 300
+    m_FontSize: 250
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -163,10 +163,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: aaa24f91aabbb7c47abc9c8f952957ca, type: 3}
-    m_FontSize: 211
+    m_FontSize: 150
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 1
     m_MaxSize: 211
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -489,8 +489,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -162}
-  m_SizeDelta: {x: 846.8945, y: 282.3221}
+  m_AnchoredPosition: {x: 0, y: -158}
+  m_SizeDelta: {x: 846.8945, y: 157.5927}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8188066342585328753
 CanvasRenderer:
@@ -659,7 +659,7 @@ GameObject:
   - component: {fileID: 8188066342781980239}
   - component: {fileID: 8188066342781980235}
   m_Layer: 5
-  m_Name: PauseMenu
+  m_Name: PRFAB_PauseMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -797,8 +797,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 138}
-  m_SizeDelta: {x: 846.8945, y: 282.3221}
+  m_AnchoredPosition: {x: 0, y: 60.661}
+  m_SizeDelta: {x: 846.8945, y: 163}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8188066343025174222
 CanvasRenderer:
@@ -1086,10 +1086,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: aaa24f91aabbb7c47abc9c8f952957ca, type: 3}
-    m_FontSize: 211
+    m_FontSize: 150
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 1
     m_MaxSize: 211
     m_Alignment: 4
     m_AlignByGeometry: 0
