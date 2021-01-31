@@ -30,24 +30,39 @@ public class GUI_DarknessChange : MonoBehaviour
         if(other.gameObject.layer == 12)
         {
             Debug.Log("ShiftCall");
-            foreach (Image image in onScreenSprites)
+            if(onScreenSprites == null)
             {
-                image.color = new Color(1, 1, 1);
+                Debug.LogError("Missing Sprite Refrence");
             }
-            foreach (Image image in onScreenSprites)
+            else
             {
-                image.CrossFadeColor(endColor, shiftTime, false, false,true);
+                foreach (Image image in onScreenSprites)
+                {
+                    image.color = new Color(1, 1, 1);
+                }
+                foreach (Image image in onScreenSprites)
+                {
+                    image.CrossFadeColor(endColor, shiftTime, false, false, true);
+                }
             }
+     
         }
     }
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.layer == 12)
+        if (onScreenSprites == null)
         {
-            Debug.Log("DeShift");
-            foreach (Image image in onScreenSprites)
+            Debug.LogError("Missing Sprite Refrence");
+        }
+        else
+        {
+            if (other.gameObject.layer == 12)
             {
-                image.CrossFadeColor(startColor, shiftTime, false, false, true);
+                Debug.Log("DeShift");
+                foreach (Image image in onScreenSprites)
+                {
+                    image.CrossFadeColor(startColor, shiftTime, false, false, true);
+                }
             }
         }
     }
