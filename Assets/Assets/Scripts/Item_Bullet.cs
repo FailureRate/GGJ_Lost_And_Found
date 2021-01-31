@@ -26,7 +26,7 @@ public class Item_Bullet : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.CompareTag("Enviorment"))
+        if(other.gameObject.CompareTag("Enviorment") && other.gameObject.CompareTag("Hookable"))
         {
             fireVector = Vector3.zero;
             Debug.Log(other.gameObject.tag);
