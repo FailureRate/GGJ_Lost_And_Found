@@ -21,6 +21,7 @@ public class LVL_BoulderSpawn : MonoBehaviour
             GetComponent<MeshRenderer>().material = activatedMat;
             Boulder.transform.position = BoulderSpawn.transform.position;
             Boulder.GetComponent<Rigidbody>().velocity = noMomentum;
+            GetComponent<AudioSource>().Play();
         }
     }
     private void OnTriggerExit(Collider other)
