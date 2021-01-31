@@ -204,6 +204,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireVector: {x: 0, y: 0, z: 0}
+  hitBulletLife: 0.5
 --- !u!54 &3868877216247643302
 Rigidbody:
   m_ObjectHideFlags: 0
