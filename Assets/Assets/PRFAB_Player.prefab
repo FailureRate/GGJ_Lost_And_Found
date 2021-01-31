@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2188731427292369969}
   - component: {fileID: 2188731427292369968}
   - component: {fileID: 1494033071856158798}
+  - component: {fileID: 8964800576405674451}
   m_Layer: 0
   m_Name: PRFAB_Player
   m_TagString: Player
@@ -93,6 +94,19 @@ MonoBehaviour:
   arrow: {fileID: 0}
   hook: {fileID: 0}
   lantern: {fileID: 8520905166980672490}
+--- !u!114 &8964800576405674451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2188731427292369971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ed4e6fdf4d8bf8429d8906f67819190, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gunOrigin: {fileID: 0}
 --- !u!1 &2188731427410338936
 GameObject:
   m_ObjectHideFlags: 0
