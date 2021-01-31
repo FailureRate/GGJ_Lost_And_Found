@@ -343,14 +343,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasBomb: 1
-  hasBow: 0
+  hasGun: 1
   hasHook: 1
   hasLantern: 1
+  lantern: {fileID: 8520905166980672490}
   bomb: {fileID: 0}
   bombExplosion: {fileID: 0}
-  arrow: {fileID: 0}
+  bombCooldownTimerMax: 1
+  playerHullTransform: {fileID: 2188731428613575497}
+  gunOrigin: {fileID: 5944687405244748688}
+  bulletRefrence: {fileID: 8683479833754609614, guid: d1d2a70df1b329e44827c965218fdef0,
+    type: 3}
+  muzzelLight: {fileID: 2709693215614997547}
+  projectileSpeed: 50
+  gunCooldownTimerMax: 1
+  controller: {fileID: 2188731427292369969}
+  HidingHole: {fileID: 4839014552345378700}
   hook: {fileID: 0}
-  lantern: {fileID: 8520905166980672490}
+  distanceToPlayer: 2
+  hookTravelSpeed: 50
+  playerTravelSpeed: 100
+  hooked: 0
+  maxDistance: 20
 --- !u!114 &43253547
 MonoBehaviour:
   m_ObjectHideFlags: 0

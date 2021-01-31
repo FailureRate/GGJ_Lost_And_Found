@@ -11,6 +11,8 @@ TagManager:
   - UI
   - WorldLight
   - PlayerDarknessRange
+  - GrappleHook
+  - Hookable
   layers:
   - Default
   - TransparentFX
