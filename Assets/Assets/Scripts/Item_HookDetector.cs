@@ -14,6 +14,15 @@ public class Item_HookDetector : MonoBehaviour
 
         }
         
+        if (other.tag == "Enviorment")
+        {
+            PRFAB_Player.Return.Hook();
+        }
+
+        if (other.tag == "Boulder")
+        {
+            PRFAB_Player.Return.Hook();
+        }
     }
 }
  
