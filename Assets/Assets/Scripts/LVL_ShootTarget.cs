@@ -7,6 +7,7 @@ public class LVL_ShootTarget : MonoBehaviour
     [Header("Activatable")]
     [SerializeField] private GameObject Interactable;
 
+
     [Header("Material")]
     [SerializeField] private Material activatedMat;
     [SerializeField] private Material deactivatedMat;
