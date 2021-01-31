@@ -42,4 +42,9 @@ public class GUI_PauseMenu : MonoBehaviour
         GameManager.Instance.CurrentState(GameStates.LEVEL);
         GameManager.Instance.Pause(false);
     }
+
+    public void ExitOnClick()
+    {
+        GameManager.Instance.ReturnToStart();
+    }
 }
