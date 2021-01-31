@@ -7,6 +7,10 @@ TagManager:
   - Bomb
   - Bullet
   - Boulder
+  - Enviorment
+  - UI
+  - WorldLight
+  - PlayerDarknessRange
   layers:
   - Default
   - TransparentFX
