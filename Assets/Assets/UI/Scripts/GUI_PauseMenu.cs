@@ -45,6 +45,6 @@ public class GUI_PauseMenu : MonoBehaviour
 
     public void ExitOnClick()
     {
-        GameManager.Instance.ReturnToStart();
+        Application.Quit();
     }
 }
