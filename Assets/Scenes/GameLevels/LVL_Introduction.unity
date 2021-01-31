@@ -803,11 +803,6 @@ PrefabInstance:
       propertyPath: Interactable
       value: 
       objectReference: {fileID: 1796882343}
-    - target: {fileID: 2410758748997273614, guid: ae082f389fe11174a96455bbb3356f3d,
-        type: 3}
-      propertyPath: audioManager
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 2410758748997273616, guid: ae082f389fe11174a96455bbb3356f3d,
         type: 3}
       propertyPath: m_Name
@@ -4440,6 +4435,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2410758748997273614, guid: ae082f389fe11174a96455bbb3356f3d,
         type: 3}
+      propertyPath: Interactable
+      value: 
+      objectReference: {fileID: 1444272978}
+    - target: {fileID: 2410758748997273614, guid: ae082f389fe11174a96455bbb3356f3d,
+        type: 3}
       propertyPath: audioManager
       value: 
       objectReference: {fileID: 0}
@@ -6925,6 +6925,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1425378098}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1444272978 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7776379687090440102, guid: d01859f71aa0abf4182a0877b4d6a603,
+    type: 3}
+  m_PrefabInstance: {fileID: 158724787}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1473634759 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6207446122706929893, guid: 74bd9411fbbc85549a8e4f15358a5e06,
