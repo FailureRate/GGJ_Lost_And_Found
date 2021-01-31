@@ -15,6 +15,7 @@ public class PL_ItemController : MonoBehaviour
 
     [Header("References")]
     [SerializeField] private GameObject bomb;
+    [SerializeField] private ParticleSystem bombExplosion;
     [SerializeField] private GameObject arrow;
     [SerializeField] private GameObject hook;
 
@@ -35,10 +36,12 @@ public class PL_ItemController : MonoBehaviour
                 //Instantiate(bomb, this.gameObject.transform.position, this.gameObject.transform.rotation);
                 isBombPlaced = true;
                 bomb.transform.position = gameObject.transform.position;
+                bombExplosion.transform.position = gameObject.transform.position;
             }
                 else{
                      isBombPlaced = false;
                 bomb.GetComponent<Item_Bomb>().Explode();
+                bombExplosion.Play();
                 }
             }
         }

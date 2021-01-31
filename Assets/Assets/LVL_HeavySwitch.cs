@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LVL_ToggleSwitch : MonoBehaviour
+public class LVL_HeavySwitch : MonoBehaviour
 {
     [Header("Activatable")]
     [SerializeField] private GameObject Interactable;
@@ -15,11 +15,21 @@ public class LVL_ToggleSwitch : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player" && isSwitchActivated == false)
+        if (other.gameObject.tag == "Boulder" && isSwitchActivated == false)
         {
             Interactable.GetComponent<LVL_Door>().Activate();
             GetComponent<MeshRenderer>().material = activatedMat;
             isSwitchActivated = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "Boulder" && isSwitchActivated == true)
+        {
+            Interactable.GetComponent<LVL_Door>().Deactivate();
+            GetComponent<MeshRenderer>().material = deactivatedMat;
+            isSwitchActivated = false;
         }
     }
 }

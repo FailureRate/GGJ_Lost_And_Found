@@ -6,8 +6,7 @@ TagManager:
   tags:
   - Bomb
   - Bullet
-  - UI
-  - Enviorment
+  - Boulder
   layers:
   - Default
   - TransparentFX
@@ -21,7 +20,7 @@ TagManager:
   - 
   - 
   - 
-  - darkness
+  - 
   - 
   - 
   - 

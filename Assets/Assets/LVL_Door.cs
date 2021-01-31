@@ -4,21 +4,24 @@ using UnityEngine;
 
 public class LVL_Door : MonoBehaviour
 {
-    private Vector3 Slide = new Vector3(0, 10.0f, 0);
-    void Start()
-    {
-    }
+    private Vector3 Slide = new Vector3(0, 7.58f, 0);
+    public bool isOpen;
 
-    void Update()
-    {
-    }
     public void Activate()
     {
-        gameObject.transform.position += Slide;
+        if (isOpen == false)
+        {
+            gameObject.transform.position -= Slide;
+            isOpen = true;
+        }
     }
 
     public void Deactivate()
     {
-        gameObject.transform.position -= Slide;
+        if (isOpen == true)
+        {
+            gameObject.transform.position += Slide;
+            isOpen = false;
+        }
     }
 }
