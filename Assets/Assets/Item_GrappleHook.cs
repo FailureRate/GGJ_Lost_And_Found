@@ -4,35 +4,76 @@ using UnityEngine;
 
 public class Item_GrappleHook : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private CharacterController controller;
+    [SerializeField] GameObject HidingHole;
+    [SerializeField] float distanceToPlayer;
+    public GameObject hook;
+    public GameObject hookholder;
+    public float hookTravelSpeed;
+    public float playerTravelSpeed;
+    public static bool fired;
+    public bool hooked;
+    public float maxDistance;
+    private float currentDistance;
+    public Vector3 hookposition;
+
+
+    private void Update()
     {
+        if (Input.GetMouseButtonDown(0) && fired == false)
+            fired = true;
+       
+        if(fired == true && hooked == false)
+        {
+            hook.transform.Translate(Vector3.forward* Time.deltaTime * hookTravelSpeed);
+            currentDistance = Vector3.Distance(transform.position, hook.transform.position);
+
+            if (currentDistance >= maxDistance)
+            {
+                ReturnHook();
+            }
+                
+                
+        }
+
+        
+        if (hooked == true )
+        {
+            Vector3 something = hook.transform.position - transform.position;
+            something.Normalize();
+
+            controller.Move(something * Time.deltaTime * playerTravelSpeed);
+            hookposition = hook.transform.position;
+
+            float distanceToHook = Vector3.Distance(transform.position, hook.transform.position);
+            Debug.Log(distanceToHook);
+           
+
+            if (distanceToHook < distanceToPlayer)
+            {
+                ReturnHook();
+            }
+                
+            
+        }
+        if (fired == false && hooked == false)
+        {
+            hook.transform.position = HidingHole.transform.position;
+        }
 
     }
 
-    // Update is called once per frame
-    void Update()
+    public void SetHookState(bool state_)
     {
-        int layerMask = 1 << 8;
-        layerMask = ~layerMask;
-        RaycastHit hit;
-        if (Input.GetKeyDown(KeyCode.Space)) 
-        {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        hooked = state_;
+    }
 
+    void ReturnHook()
+    {
 
-            if (Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask))
-            {
-                Transform objectHit = hit.transform;
-
-                Debug.DrawRay(transform.position, hit.point, Color.green);
-                Debug.Log("hit");
-
-            }
-           /* else
-            {
-                Debug.Log("didnt hit");
-            } */
-        }
+   
+        fired = false;
+        hooked = false;
+        Debug.Log("test");
     }
 }
