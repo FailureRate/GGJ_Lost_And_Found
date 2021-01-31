@@ -5,7 +5,7 @@ using UnityEngine;
 public class ENV_SwitchHeadRotator : MonoBehaviour
 {
     [Header("Refrence")]
-    [SerializeField] Transform switchHeadTransform;
+    [SerializeField] Transform objectRef;
     [Header("Generics")]
     [SerializeField] float rotateSpeed;
 
@@ -19,6 +19,6 @@ public class ENV_SwitchHeadRotator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        switchHeadTransform.Rotate(0, 0, rotateSpeed * Time.deltaTime);
+        objectRef.Rotate(0, 0, rotateSpeed * Time.deltaTime);
     }
 }

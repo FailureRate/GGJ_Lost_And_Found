@@ -30,7 +30,7 @@ public class Item_Bullet : MonoBehaviour
         {
             fireVector = Vector3.zero;
             Debug.Log(other.gameObject.tag);
-            Destroy(this.gameObject,0.5f);
+            Destroy(this.gameObject, hitBulletLife);
         }
     }
 
