@@ -70,7 +70,7 @@ public class Item_GrappleHook : MonoBehaviour
         hooked = state_;
     }
 
-    void ReturnHook()
+    public void ReturnHook()
     {
 
         GameObject.Find("PRFAB_Player").GetComponent<PL_Movement>().canMove = true;

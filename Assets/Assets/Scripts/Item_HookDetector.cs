@@ -4,24 +4,24 @@ using UnityEngine;
 
 public class Item_HookDetector : MonoBehaviour
 {
-    public Item_GrappleHook Playerholder;
+    public Item_GrappleHook PRFAB_Player;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Hookable")
         {
-            Playerholder.GetComponent<Item_GrappleHook>().SetHookState(true);
+            PRFAB_Player.GetComponent<Item_GrappleHook>().SetHookState(true);
 
         }
         
         if (other.tag == "Enviorment")
         {
-            PRFAB_Player.Return.Hook();
+            PRFAB_Player.ReturnHook();
         }
 
         if (other.tag == "Boulder")
         {
-            PRFAB_Player.Return.Hook();
+            PRFAB_Player.ReturnHook();
         }
     }
 }
