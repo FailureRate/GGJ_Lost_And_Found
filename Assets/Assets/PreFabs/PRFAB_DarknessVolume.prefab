@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1189747963024223876}
   - component: {fileID: 1189747963024223875}
   - component: {fileID: 1189747963024223877}
-  - component: {fileID: 4679244798190203441}
+  - component: {fileID: 7205661236873462706}
   m_Layer: 12
   m_Name: PRFAB_DarknessVolume
   m_TagString: Untagged
@@ -62,7 +62,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &4679244798190203441
+--- !u!114 &7205661236873462706
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

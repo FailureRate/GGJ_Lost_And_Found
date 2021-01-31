@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager {
     private static GameManager instance = new GameManager();
@@ -54,6 +55,21 @@ public class GameManager {
         }
         return currentState;
    }
+
+    public void ChangeScene(string name_)
+    {
+        CurrentState(GameStates.MENU);
+        SceneManager.LoadScene(name_);
+    }
+    public void ReturnToStart()
+    {
+        CurrentState(GameStates.MENU);
+        playerHasLantern = false;
+        playerHasGun = false;
+        playerHasBomb = false;
+        playerHasHook = false;
+        SceneManager.LoadScene(0);
+    }
     public void SetItem(itemState state_)
     {
         if(state_ == itemState.Lantern)

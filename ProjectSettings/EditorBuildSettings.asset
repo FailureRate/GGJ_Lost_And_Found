@@ -11,4 +11,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameLevels/LVL_Introduction.unity
     guid: 9d3f3a2165ae3cc4d8a3a552dfc37c2b
+  - enabled: 1
+    path: Assets/Scenes/GameLevels/LVL_Gun.unity
+    guid: 631cad5b45414c846ae860573a62aa18
+  - enabled: 1
+    path: Assets/Scenes/GameLevels/LVL_Bomb.unity
+    guid: 8845acfb713a337488e67452ac90636a
+  - enabled: 1
+    path: Assets/Scenes/GameLevels/LVL_Hook.unity
+    guid: ff321a592ca24ec42a6f9d6325a801ee
+  - enabled: 1
+    path: Assets/Scenes/GameLevels/LVL_Final.unity
+    guid: a1135231e44f24a4f8adb5dd8f0c1a7b
   m_configObjects: {}

@@ -23,6 +23,10 @@ public class ENV_DarknessRises : MonoBehaviour
             }
         }
         initialLightIntensity = worldLight.intensity;
+        if(initialLightIntensity == 0)
+        {
+            initialLightIntensity = 1;
+        }
     }
 
     private void OnTriggerEnter(Collider other)
