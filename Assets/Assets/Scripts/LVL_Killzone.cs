@@ -6,7 +6,7 @@ public class LVL_Killzone : MonoBehaviour
 {
     [Header("Reset")]
     [SerializeField] private GameObject Player;
-    [SerializeField] private Transform PlayerSpawn;
+    [SerializeField] private GameObject PlayerSpawn;
     [SerializeField] private Transform PlayerTransform;
 
     Vector3 noMomentum = new Vector3(0, 0, 0);
@@ -15,8 +15,13 @@ public class LVL_Killzone : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            Instantiate(PlayerTransform, PlayerSpawn.position, PlayerSpawn.rotation);
-            Destroy(Player);
+            CharacterController CC = Player.GetComponent<CharacterController>();
+            CC.enabled = false;
+            Player.transform.position = PlayerSpawn.transform.position;
+
+            CC.enabled = true;
+            Debug.Log("Pew");
+            //Destroy(Player);
         }
     }
 }
