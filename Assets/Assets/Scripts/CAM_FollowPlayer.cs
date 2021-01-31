@@ -7,7 +7,9 @@ public class CAM_FollowPlayer : MonoBehaviour
     [Header("Reffrences")]
     [SerializeField] private Transform playerLocation;
     [Header("Generics")]
-    [SerializeField] private float cameraDistance;
+    [Tooltip("Smoothspeed = 1 frame")]
+    [SerializeField] private float smoothSpeed = 0.125f;
+    [SerializeField] private Vector3 offSet = new Vector3(0,25,0);
     // Start is called before the first frame update
     void Start()
     {
@@ -15,10 +17,11 @@ public class CAM_FollowPlayer : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
-        Vector3 positionChange = new Vector3(playerLocation.position.x, cameraDistance, playerLocation.position.z);
-        this.transform.position = positionChange;
+        Vector3 targetPosition = playerLocation.position + offSet;
+        Vector3 smoothedPosition = Vector3.Lerp(transform.position, targetPosition, smoothSpeed);
+        this.transform.position = smoothedPosition;
         
     }
 }
