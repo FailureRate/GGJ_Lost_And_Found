@@ -803,6 +803,11 @@ PrefabInstance:
       propertyPath: Interactable
       value: 
       objectReference: {fileID: 1796882343}
+    - target: {fileID: 2410758748997273614, guid: ae082f389fe11174a96455bbb3356f3d,
+        type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 2410758748997273616, guid: ae082f389fe11174a96455bbb3356f3d,
         type: 3}
       propertyPath: m_Name
@@ -951,18 +956,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 43253547, guid: a4b8050d1e6f72d469cc5a6c835c34ae, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1621434686, guid: a4b8050d1e6f72d469cc5a6c835c34ae, type: 3}
       propertyPath: hook
       value: 
       objectReference: {fileID: 1741998750}
-    - target: {fileID: 1621434686, guid: a4b8050d1e6f72d469cc5a6c835c34ae, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1494033071856158798, guid: a4b8050d1e6f72d469cc5a6c835c34ae,
         type: 3}
       propertyPath: bomb
@@ -975,54 +972,9 @@ PrefabInstance:
       objectReference: {fileID: 1741998750}
     - target: {fileID: 1494033071856158798, guid: a4b8050d1e6f72d469cc5a6c835c34ae,
         type: 3}
-      propertyPath: hasGun
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1494033071856158798, guid: a4b8050d1e6f72d469cc5a6c835c34ae,
-        type: 3}
-      propertyPath: hasBomb
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1494033071856158798, guid: a4b8050d1e6f72d469cc5a6c835c34ae,
-        type: 3}
-      propertyPath: hasHook
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1494033071856158798, guid: a4b8050d1e6f72d469cc5a6c835c34ae,
-        type: 3}
-      propertyPath: bombButton
-      value: 101
-      objectReference: {fileID: 0}
-    - target: {fileID: 1494033071856158798, guid: a4b8050d1e6f72d469cc5a6c835c34ae,
-        type: 3}
-      propertyPath: hasLantern
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1494033071856158798, guid: a4b8050d1e6f72d469cc5a6c835c34ae,
-        type: 3}
       propertyPath: bombExplosion
       value: 
       objectReference: {fileID: 358689706}
-    - target: {fileID: 1494033071856158798, guid: a4b8050d1e6f72d469cc5a6c835c34ae,
-        type: 3}
-      propertyPath: hookMouseCode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1494033071856158798, guid: a4b8050d1e6f72d469cc5a6c835c34ae,
-        type: 3}
-      propertyPath: lanternButton
-      value: 113
-      objectReference: {fileID: 0}
-    - target: {fileID: 1747903538658184258, guid: a4b8050d1e6f72d469cc5a6c835c34ae,
-        type: 3}
-      propertyPath: m_TagString
-      value: PlayerDarknessRange
-      objectReference: {fileID: 0}
-    - target: {fileID: 2188731427292369968, guid: a4b8050d1e6f72d469cc5a6c835c34ae,
-        type: 3}
-      propertyPath: gravity
-      value: -9.14
-      objectReference: {fileID: 0}
     - target: {fileID: 2188731427292369968, guid: a4b8050d1e6f72d469cc5a6c835c34ae,
         type: 3}
       propertyPath: playerCamera
@@ -1090,11 +1042,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4659363076927910476, guid: a4b8050d1e6f72d469cc5a6c835c34ae,
         type: 3}
-      propertyPath: onScreenSprites.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4659363076927910476, guid: a4b8050d1e6f72d469cc5a6c835c34ae,
-        type: 3}
       propertyPath: onScreenSprites.Array.data[0]
       value: 
       objectReference: {fileID: 934896242}
@@ -1127,6 +1074,11 @@ PrefabInstance:
       propertyPath: Interactable
       value: 
       objectReference: {fileID: 27071755}
+    - target: {fileID: 4467511081222909976, guid: d27ec753576bb1c4da18ef595a7cacd5,
+        type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4467511081222909980, guid: d27ec753576bb1c4da18ef595a7cacd5,
         type: 3}
       propertyPath: m_RootOrder
@@ -4412,6 +4364,11 @@ PrefabInstance:
       propertyPath: Interactable
       value: 
       objectReference: {fileID: 1229288177}
+    - target: {fileID: 4467511081222909976, guid: d27ec753576bb1c4da18ef595a7cacd5,
+        type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4467511081222909980, guid: d27ec753576bb1c4da18ef595a7cacd5,
         type: 3}
       propertyPath: m_RootOrder
@@ -4483,9 +4440,9 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2410758748997273614, guid: ae082f389fe11174a96455bbb3356f3d,
         type: 3}
-      propertyPath: Interactable
+      propertyPath: audioManager
       value: 
-      objectReference: {fileID: 1416139677}
+      objectReference: {fileID: 0}
     - target: {fileID: 2410758748997273616, guid: ae082f389fe11174a96455bbb3356f3d,
         type: 3}
       propertyPath: m_Name
@@ -6766,12 +6723,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ae082f389fe11174a96455bbb3356f3d, type: 3}
---- !u!1 &1416139677 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7776379687090440102, guid: d01859f71aa0abf4182a0877b4d6a603,
-    type: 3}
-  m_PrefabInstance: {fileID: 158724787}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1416139678 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7776379687090440122, guid: d01859f71aa0abf4182a0877b4d6a603,
@@ -7189,6 +7140,11 @@ PrefabInstance:
       propertyPath: Interactable
       value: 
       objectReference: {fileID: 1227961126}
+    - target: {fileID: 4467511081222909976, guid: d27ec753576bb1c4da18ef595a7cacd5,
+        type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4467511081222909980, guid: d27ec753576bb1c4da18ef595a7cacd5,
         type: 3}
       propertyPath: m_RootOrder

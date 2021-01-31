@@ -13,11 +13,16 @@ public class Util_AudioManager : MonoBehaviour
 //  public static Util_AudioManager Instance {
 //         get { return instance; }
 //     }
-
+    [Header("Music")]
     public AudioClip levelMusic;
     public AudioClip menuMusic;
+    [Header("Sfx")]
+    
+    public AudioClip button;
 
+    [Header("audio sources")]
     public AudioSource musicPLayer;
+    public AudioSource sfxPlayer;
 
     // Start is called before the first frame update
     void Start()
@@ -46,5 +51,10 @@ public class Util_AudioManager : MonoBehaviour
                    musicPLayer.Stop();
                     break;
             }
+    }
+  
+    public void ButtonSound(){
+        sfxPlayer.clip = button;
+        sfxPlayer.Play();
     }
 }

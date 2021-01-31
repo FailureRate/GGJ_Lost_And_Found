@@ -11,6 +11,7 @@ public class LVL_HeavySwitch : MonoBehaviour
     [SerializeField] private Material activatedMat;
     [SerializeField] private Material deactivatedMat;
 
+
     private bool isSwitchActivated;
 
     private void OnTriggerEnter(Collider other)
@@ -19,6 +20,7 @@ public class LVL_HeavySwitch : MonoBehaviour
         {
             Interactable.GetComponent<LVL_Door>().Activate();
             GetComponent<MeshRenderer>().material = activatedMat;
+            GetComponent<AudioSource>().Play();
             isSwitchActivated = true;
         }
     }

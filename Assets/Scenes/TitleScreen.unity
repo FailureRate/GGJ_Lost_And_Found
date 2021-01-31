@@ -468,6 +468,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1062837925029901719}
+        m_TargetAssemblyTypeName: Util_AudioManager, Assembly-CSharp
+        m_MethodName: ButtonSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &582243233
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1009,11 +1021,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1062837924644514308, guid: 672a0f90c6f456b4b931dc0eb191cf53,
-        type: 3}
-      propertyPath: nextScene
-      value: LVL_Introduction
-      objectReference: {fileID: 0}
     - target: {fileID: 1062837924644514310, guid: 672a0f90c6f456b4b931dc0eb191cf53,
         type: 3}
       propertyPath: m_RootOrder
@@ -1076,3 +1083,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 672a0f90c6f456b4b931dc0eb191cf53, type: 3}
+--- !u!114 &1062837925029901719 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1062837924644514311, guid: 672a0f90c6f456b4b931dc0eb191cf53,
+    type: 3}
+  m_PrefabInstance: {fileID: 1062837925029901717}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49619e6895625a549b79583641cc60db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

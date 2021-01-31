@@ -11,6 +11,8 @@ public class LVL_PressureSwitch : MonoBehaviour
     [SerializeField] private Material activatedMat;
     [SerializeField] private Material deactivatedMat;
 
+
+
     private bool isSwitchActivated;
 
     private void Update()
@@ -25,6 +27,7 @@ public class LVL_PressureSwitch : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
+          GetComponent<AudioSource>().Play();
             Interactable.GetComponent<LVL_Door>().Activate();
         }
     }
