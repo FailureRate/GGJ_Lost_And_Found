@@ -14,23 +14,37 @@ public class LVL_ShootTarget : MonoBehaviour
     [Header("Reference")]
     [SerializeField] private GameObject Crystal;
 
-
-    private bool isSwitchActivated;
+    [SerializeField] private bool isSwitchActivated;
     public LVL_Door DoorScript;
 
     private void Update()
     {
-        if(DoorScript.isOpen == true)
+        if(Interactable.Length > 1)
         {
-            Crystal.GetComponent<MeshRenderer>().material = activatedMat;
-            isSwitchActivated = true;
+            if (isSwitchActivated)
+            {
+                Crystal.GetComponent<MeshRenderer>().material = activatedMat;
+            }
+            else
+            {
+                Crystal.GetComponent<MeshRenderer>().material = deactivatedMat;
+            }
         }
+        else
+        {
+            if (DoorScript.isOpen == true)
+            {
+                Crystal.GetComponent<MeshRenderer>().material = activatedMat;
+                isSwitchActivated = true;
+            }
 
-        else if (DoorScript.isOpen == false)
-        {
-            Crystal.GetComponent<MeshRenderer>().material = deactivatedMat;
-            isSwitchActivated = false;
+            else if (DoorScript.isOpen == false)
+            {
+                Crystal.GetComponent<MeshRenderer>().material = deactivatedMat;
+                isSwitchActivated = false;
+            }
         }
+  
     }
 
     private void OnTriggerEnter(Collider other)
