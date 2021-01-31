@@ -231,7 +231,7 @@ GameObject:
   - component: {fileID: 32968974}
   m_Layer: 5
   m_Name: Hook
-  m_TagString: Untagged
+  m_TagString: UI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -306,7 +306,7 @@ GameObject:
   - component: {fileID: 55219997}
   m_Layer: 5
   m_Name: Lantern
-  m_TagString: Enviorment
+  m_TagString: UI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -375,6 +375,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1747903538658184258, guid: a4b8050d1e6f72d469cc5a6c835c34ae,
+        type: 3}
+      propertyPath: m_TagString
+      value: PlayerDarknessRange
+      objectReference: {fileID: 0}
     - target: {fileID: 2188731427292369968, guid: a4b8050d1e6f72d469cc5a6c835c34ae,
         type: 3}
       propertyPath: playerCamera
@@ -440,6 +445,31 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4659363076927910476, guid: a4b8050d1e6f72d469cc5a6c835c34ae,
+        type: 3}
+      propertyPath: shiftTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4659363076927910476, guid: a4b8050d1e6f72d469cc5a6c835c34ae,
+        type: 3}
+      propertyPath: onScreenSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 55219997}
+    - target: {fileID: 4659363076927910476, guid: a4b8050d1e6f72d469cc5a6c835c34ae,
+        type: 3}
+      propertyPath: onScreenSprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 559691748}
+    - target: {fileID: 4659363076927910476, guid: a4b8050d1e6f72d469cc5a6c835c34ae,
+        type: 3}
+      propertyPath: onScreenSprites.Array.data[2]
+      value: 
+      objectReference: {fileID: 1134980154}
+    - target: {fileID: 4659363076927910476, guid: a4b8050d1e6f72d469cc5a6c835c34ae,
+        type: 3}
+      propertyPath: onScreenSprites.Array.data[3]
+      value: 
+      objectReference: {fileID: 32968974}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a4b8050d1e6f72d469cc5a6c835c34ae, type: 3}
 --- !u!1 &87237141
@@ -454,7 +484,7 @@ GameObject:
   - component: {fileID: 87237142}
   m_Layer: 0
   m_Name: Directional Light
-  m_TagString: Untagged
+  m_TagString: WorldLight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -548,7 +578,7 @@ GameObject:
   - component: {fileID: 559691748}
   m_Layer: 5
   m_Name: Gun
-  m_TagString: Untagged
+  m_TagString: UI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -721,7 +751,7 @@ GameObject:
   - component: {fileID: 1134980154}
   m_Layer: 5
   m_Name: Bomb
-  m_TagString: Untagged
+  m_TagString: UI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -796,7 +826,7 @@ GameObject:
   - component: {fileID: 1236430458}
   - component: {fileID: 1236430457}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: InGameOverlay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -831,7 +861,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -854,7 +884,7 @@ Canvas:
   m_RenderMode: 0
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
-  m_PixelPerfect: 0
+  m_PixelPerfect: 1
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
@@ -1019,6 +1049,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2000217754 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1189747963024223874, guid: 288f74e5ef4e5194bb33a250f3229f97,
+    type: 3}
+  m_PrefabInstance: {fileID: 1189747963399871200}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2000217758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2000217754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d75b58ed0c154cb4e9b4382c0d05a79e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  worldLight: {fileID: 0}
+  transitionTime: 1
+  transitionTag: PlayerDarknessRange
 --- !u!1 &2087522064
 GameObject:
   m_ObjectHideFlags: 0
